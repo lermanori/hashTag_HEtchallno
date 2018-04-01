@@ -1,14 +1,13 @@
-﻿using System;
-
-namespace BinaryAnalysisAndStats
+﻿namespace BinaryAnalysisAndStats
 {
+    using System;
 
-    class BinaryAnalysisAndStats
+    public class BinaryAnalysisAndStats
     {
         public static void Main()
         {
             ConsoleKeyInfo lastDigitRecieved;
-            string decimalNumbers = "";
+            string decimalNumbers = string.Empty;
             int howManyPowerOfTwo = 0, howManyDownSeries = 0;
             int decimalValue = 0, totalDecimalSum = 0;
             int numbersRead = 0, digitCounter = 0, numberOfOnes = 0, numberOfZeros = 0;
@@ -24,7 +23,6 @@ namespace BinaryAnalysisAndStats
                     decimalValue = (decimalValue * 2) + 1;
                     ++numberOfOnes;
                     ++digitCounter;
-
                 }
                 else if (lastDigitRecieved.KeyChar == '0')
                 {
@@ -32,7 +30,6 @@ namespace BinaryAnalysisAndStats
                     ++numberOfZeros;
                     ++digitCounter;
                 }
-
                 else if (digitCounter == 9 && lastDigitRecieved.Key == ConsoleKey.Enter)
                 {
                     Console.WriteLine();
@@ -40,16 +37,17 @@ namespace BinaryAnalysisAndStats
                     decimalNumbers += ",";
 
                     totalDecimalSum += decimalValue;
-                    if(numbersRead == 2)
+                    if (numbersRead == 2)
                     {
                         decimalAverage = totalDecimalSum / 3;
                     }
-                    if (Math.Log(decimalValue,2) - Math.Floor(Math.Log(decimalValue, 2)) == 0)
+
+                    if (Math.Log(decimalValue, 2) - Math.Floor(Math.Log(decimalValue, 2)) == 0)
                     {
                         howManyPowerOfTwo++;
                     }
 
-                    howManyDownSeries += checkIfDownSeries(decimalValue.ToString());
+                    howManyDownSeries += CheckIfDownSeries(decimalValue.ToString());
                     decimalValue = 0;
                     digitCounter = 0;
                     numbersRead++;
@@ -63,25 +61,26 @@ namespace BinaryAnalysisAndStats
                     digitCounter = 0;
                 }
             }
-            
+
             Console.WriteLine("Numbers Are: " + decimalNumbers);
             Console.WriteLine("Out of them #" + howManyPowerOfTwo + " numbers are a power of 2");
             Console.WriteLine("Out of them #" + howManyDownSeries + " numbers compose a down series");
             Console.WriteLine("Total Average is" + decimalAverage);
             Console.ReadLine();
-
         }
-        public static int checkIfDownSeries(string i_numberToCheck)
+
+        public static int CheckIfDownSeries(string i_numberToCheck)
         {
             int i;
             int max = i_numberToCheck[0];
-            for(i=1; i < i_numberToCheck.Length; ++i)
+            for (i = 1; i < i_numberToCheck.Length; ++i)
             {
-                if(i_numberToCheck[i] >= max)
+                if (i_numberToCheck[i] >= max)
                 {
                     return 0;
                 }
             }
+
             return 1;
         }
     }
