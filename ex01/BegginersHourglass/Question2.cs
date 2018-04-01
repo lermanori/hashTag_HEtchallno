@@ -1,18 +1,18 @@
 ﻿namespace BegginersHourglass
 {
     using System;
-    class Question2
+    public class Question2
     {
-        public static void Main()
-        {
-            string hourGlass =
+        public static string hourGlass =
 @"*****
  ***
   *
  ***
 *****";
-            Console.WriteLine(hourGlass);
 
+        public static void Main()
+        {
+            Console.WriteLine(hourGlass);
             Console.ReadLine();
         }
     }

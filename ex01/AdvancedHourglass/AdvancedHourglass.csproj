@@ -35,6 +35,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Question3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BegginersHourglass">
+      <HintPath>..\BegginersHourglass.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
