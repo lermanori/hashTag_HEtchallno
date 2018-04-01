@@ -24,11 +24,11 @@
             bool isInputValid;
             string isDigitsMessage;
             string isLettersMessage;
-            string badInputMessage = string.Format("is invalid. String must be letters or numbers only!");
+            string badInputMessage = string.Format("is invalid. String must be 8 letters or digits only!");
             string isDigitsOrLettersMessage;
             string messageToShow;
-
             char lastCharInString = userInputString[userInputString.Length - 1];
+
             StringState = char.IsNumber(lastCharInString) ? eStringStates.NumericString : eStringStates.AlphabeticString;
 
             if (StringState == eStringStates.NumericString)
@@ -49,7 +49,7 @@
             isLettersMessage = string.Format("and it has {0} lower case letters.", NumberOfLowerCaseChars);
             isDigitsOrLettersMessage = StringState == eStringStates.NumericString ? isDigitsMessage : isLettersMessage;
             string goodInputMessage = string.Format("is {0}a palyndrom, {1}", isPalyndrom ? string.Empty : "not ", isDigitsOrLettersMessage);
-            messageToShow = StringState != eStringStates.WrongInput ? goodInputMessage : badInputMessage;
+            messageToShow = userInputString.Length == 8 && StringState != eStringStates.WrongInput ? goodInputMessage : badInputMessage;
             string outputMsg = string.Format("The string {0} {1}", userInputString, messageToShow);
 
             Console.WriteLine(outputMsg);
