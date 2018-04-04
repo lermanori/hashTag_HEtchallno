@@ -1,0 +1,7 @@
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\bin\Debug\fileUtils.exe.config
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\bin\Debug\fileUtils.exe
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\bin\Debug\fileUtils.pdb
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\bin\Debug\BegginersHourglass.exe
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\obj\Debug\fileUtils.exe
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\obj\Debug\fileUtils.pdb
+C:\Users\lerman\Desktop\C#\fileUtils\fileUtils\fileUtils\obj\Debug\fileUtils.csprojResolveAssemblyReference.cache
