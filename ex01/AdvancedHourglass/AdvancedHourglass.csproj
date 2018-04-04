@@ -39,9 +39,6 @@
     <Compile Include="Question3.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BegginersHourglass">
-      <HintPath>..\BegginersHourglass.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
